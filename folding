@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//folding method
+
+int main()
+{
+    string s;
+  
+    cout << "enter number\n";
+    cin >> s;
+
+    //folding and summing
+    int sum = 0;
+    for (int i = 0; i < s.length(); i += 2) {
+        if (i + 1 < s.length())
+            sum += stoi(s.substr(i, 2));
+        else
+            //when only one digit is left for folding
+            sum += stoi(s.substr(i, 1));
+    }
+
+    cout << s << "->" << sum % 10;
+
+    return 0;
+}
