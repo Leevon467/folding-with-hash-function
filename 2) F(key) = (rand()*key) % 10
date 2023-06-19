@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//hash function 2
+int main()
+{
+    int n;
+    cout << "enter number\n";
+    cin >> n;
+
+    //f(n)=rand()*n
+    cout << n << "->" << (rand() * n) % 10;
+
+    return 0;
+}
