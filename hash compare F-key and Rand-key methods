@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//comparing goodness of hash function 1 &  2
+int main()
+{
+
+    //set of input numbers
+    vector<int> arr{ 12345, 234245, 1223123, 765845, 345234, 234534, 98675, 34523, 123, 3245 };
+
+    //using hash function 1
+    cout << "using hash function 1\n";
+    for (int a : arr) {
+        cout << a << "->" << to_string(a).length() % 10 << endl;
+    }
+
+    //using hash function 2
+    cout << "\n\nusing hashh function 2\n";
+    for (int a : arr) {
+        cout << a << "->" << (rand() * a) % 10 << endl;
+    }
+
+    return 0;
+}
